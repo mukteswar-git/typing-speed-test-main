@@ -35,7 +35,7 @@ const TestControls = () => {
         </div>
       </div>
     </div>
-  );
+  ); 
 };
 
 export default TestControls;
