@@ -1,7 +1,12 @@
+import { useState } from "react";
 import CustomSelect from "./CustomSelect";
+import OptionSelector from "./OptionSelector";
 import StatsCard from "./StatsCard";
 
 const TestControls = () => {
+  const [difficulty, setDifficulty] = useState("Easy");
+  const [mode, setMode] = useState("Timed(60s)");
+
   return (
     <>
       <div className="md:flex container justify-between mx-auto">
@@ -18,6 +23,22 @@ const TestControls = () => {
           </div>
 
           <div className="border-b border-gray-400 mt-4 md:hidden"></div>
+        </div>
+
+        <div className="hidden lg:flex items-center gap-4 text-xs pr-10">
+          <OptionSelector
+            label="Difficulty:"
+            options={["Easy", "Medium", "Hard"]}
+            active={difficulty}
+            setActive={setDifficulty}
+          />
+          <div className="border-r border-gray-600 h-8"></div>
+          <OptionSelector
+            label="Mode:"
+            options={["Timed(60s)", "Passage"]}
+            active={mode}
+            setActive={setMode}
+          />
         </div>
       </div>
 
