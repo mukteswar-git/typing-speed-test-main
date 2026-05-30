@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Paragraph from "../components/Paragraph";
 import TestControls from "../components/TestControls";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Navbar />
       <TestControls />
+      <Paragraph />
     </div>
   );
 };
